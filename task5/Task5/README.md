@@ -12,7 +12,8 @@ The objective of this task is to automatically tag support tickets into predefin
   - The Hugging Face `transformers` library is used to initialize a zero-shot classification pipeline with the `facebook/bart-large-mnli` model.
   - For each ticket, the model predicts the most relevant tags from the list of possible categories, outputting the top 3 most probable tags.
 - **Evaluation:**
-  - A random sample of 500 tickets is selected for evaluation.
+  - First 500 tickets were selected for evaluation but it generated output in about 40mins so reduced samples to 40 just to check the accuracy and correctness also. 
+  - Then sample of 40 tickets is selected for evaluation.
   - For each ticket, the code checks if the true label is among the top 3 predicted tags (top-3 accuracy).
   - The results, including the ticket text, true label, predicted tags, and correctness, are displayed for review.
 
